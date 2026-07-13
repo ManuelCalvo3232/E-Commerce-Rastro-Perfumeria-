@@ -55,6 +55,28 @@ $app->get("/productos", function ($request, $response) use ($renderer) {
   ]);
 });
 
+// . 
+$app->get("/productos", function ($request, $response) use ($renderer) {
+  return view($renderer, $response, "productos/index.php", [
+    "title" => "Listado de Productos",
+  ]);
+});
+
+//.
+$app->get("/productos/{id}", function ($request, $response, $args) use ($renderer) {
+  return view($renderer, $response, "productos/show.php", [
+    "title" => "Detalle de la Entidad",
+    "id" => $args["id"],
+  ]);
+});
+
+//.
+$app->get("/create/productos", function ($request, $response) use ($renderer) {
+  return view($renderer, $response, "productos/store.php", [
+    "title" => "Creando Productos",
+  ]);
+});
+
 $app->addErrorMiddleware($debug, true, true);
 
 return $app;
