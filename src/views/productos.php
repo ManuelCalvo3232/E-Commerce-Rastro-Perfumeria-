@@ -12,7 +12,10 @@
                     <article class="producto-card">
                         <img src="<?= html($producto['imagen']) ?>" alt="<?= html($producto['nombre']) ?>">
                         <h3><?= html($producto['marca']) ?> — <?= html($producto['nombre']) ?></h3>
-                        <p>$<?= html((string) $producto['precio']) ?> / <?= html($producto['ml']) ?>ml</p>
+                        <p>$<?= html((string) $producto['precio100ml']) ?> / 100ml</p>
+                        <p>$<?= html((string) $producto['precio10ml']) ?> / 10ml</p>
+                        <p>$<?= html((string) $producto['precio5ml']) ?> / 5ml</p>
+                        <br> <br>
                     </article>
                 <?php endforeach; ?>
             </div>

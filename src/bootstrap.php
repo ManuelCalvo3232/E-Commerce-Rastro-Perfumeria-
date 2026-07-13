@@ -36,16 +36,16 @@ $app->get("/", function ($request, $response) use ($renderer) {
 $app->get("/productos", function ($request, $response) use ($renderer) {
   $catalogo = [
     "Masculino" => [
-      ["nombre" => "Bleu de Chanel", "marca" => "Chanel", "precio" => 4500, "ml" => 5, "imagen" => "/img/bleu-chanel.avif"],
-      ["nombre" => "Sauvage", "marca" => "Dior", "precio" => 4200, "ml" => 5, "imagen" => "/img/sauvage.avif"],
-      ["nombre" => "Aventus", "marca" => "Creed", "precio" => 8900, "ml" => 5, "imagen" => "/img/aventus.avif"],
+      ["nombre" => "Bleu de Chanel", "marca" => "Chanel", "precio100ml" => 100000, "precio10ml" => 10000, "precio5ml" => 4500, "10ml" => 10, "5ml" => 5, "imagen" => "/img/bleu-chanel.avif"],
+      ["nombre" => "Sauvage", "marca" => "Dior", "precio100ml" => 4200, "precio10ml" => 420, "precio5ml" => 210, "10ml" => 10, "5ml" => 5, "imagen" => "/img/sauvage.avif"],
+      ["nombre" => "Aventus", "marca" => "Creed", "precio100ml" => 8900, "precio10ml" => 890, "precio5ml" => 445, "10ml" => 10, "5ml" => 5, "imagen" => "/img/aventus.avif"],
     ],
     "Femenino" => [
-      ["nombre" => "Good Girl", "marca" => "Carolina Herrera", "precio" => 4300, "ml" => 5, "imagen" => "/img/good-girl.avif"],
-      ["nombre" => "Black Opium", "marca" => "YSL", "precio" => 4100, "ml" => 5, "imagen" => "/img/black-opium.avif"],
+      ["nombre" => "Good Girl", "marca" => "Carolina Herrera", "precio100ml" => 4300, "precio10ml" => 430, "precio5ml" => 215, "10ml" => 10, "5ml" => 5, "imagen" => "/img/good-girl.avif"],
+      ["nombre" => "Black Opium", "marca" => "YSL", "precio100ml" => 4100, "precio10ml" => 410, "precio5ml" => 205, "10ml" => 10, "5ml" => 5, "imagen" => "/img/black-opium.avif"],
     ],
     "Nicho" => [
-      ["nombre" => "Baccarat Rouge 540", "marca" => "Maison Francis Kurkdjian", "precio" => 9800, "ml" => 5, "imagen" => "/img/baccarat-540.avif"],
+      ["nombre" => "Baccarat Rouge 540", "marca" => "Maison Francis Kurkdjian", "precio100ml" => 9800, "precio10ml" => 980, "precio5ml" => 490, "10ml" => 10, "5ml" => 5, "imagen" => "/img/baccarat-540.avif"],
     ],
   ];
 
