@@ -6,6 +6,10 @@
         <title><?= html($title) ?></title>
     </head>
     <body>
-       <?= $content ?>
+       <?php require __DIR__ . "/../partials/navbar.php"; ?>
+
+        <?= $content ?>
+
+        <?php require __DIR__ . "/../partials/footer.php"; ?>
     </body>
 </html>
