@@ -36,16 +36,16 @@ $app->get("/", function ($request, $response) use ($renderer) {
 $app->get("/productos", function ($request, $response) use ($renderer) {
   $catalogo = [
     "Masculino" => [
-      ["nombre" => "Bleu de Chanel", "marca" => "Chanel", "precio" => 4500, "ml" => 5, "imagen" => "/img/bleu-chanel.jpg"],
-      ["nombre" => "Sauvage", "marca" => "Dior", "precio" => 4200, "ml" => 5, "imagen" => "/img/sauvage.jpg"],
-      ["nombre" => "Aventus", "marca" => "Creed", "precio" => 8900, "ml" => 5, "imagen" => "/img/aventus.jpg"],
+      ["nombre" => "Bleu de Chanel", "marca" => "Chanel", "precio" => 4500, "ml" => 5, "imagen" => "/img/bleu-chanel.avif"],
+      ["nombre" => "Sauvage", "marca" => "Dior", "precio" => 4200, "ml" => 5, "imagen" => "/img/sauvage.avif"],
+      ["nombre" => "Aventus", "marca" => "Creed", "precio" => 8900, "ml" => 5, "imagen" => "/img/aventus.avif"],
     ],
     "Femenino" => [
-      ["nombre" => "Good Girl", "marca" => "Carolina Herrera", "precio" => 4300, "ml" => 5, "imagen" => "/img/good-girl.jpg"],
-      ["nombre" => "Black Opium", "marca" => "YSL", "precio" => 4100, "ml" => 5, "imagen" => "/img/black-opium.jpg"],
+      ["nombre" => "Good Girl", "marca" => "Carolina Herrera", "precio" => 4300, "ml" => 5, "imagen" => "/img/good-girl.avif"],
+      ["nombre" => "Black Opium", "marca" => "YSL", "precio" => 4100, "ml" => 5, "imagen" => "/img/black-opium.avif"],
     ],
     "Nicho" => [
-      ["nombre" => "Baccarat Rouge 540", "marca" => "Maison Francis Kurkdjian", "precio" => 9800, "ml" => 5, "imagen" => "/img/baccarat-540.jpg"],
+      ["nombre" => "Baccarat Rouge 540", "marca" => "Maison Francis Kurkdjian", "precio" => 9800, "ml" => 5, "imagen" => "/img/baccarat-540.avif"],
     ],
   ];
 
