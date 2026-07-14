@@ -1,7 +1,7 @@
 <main class="form-container">
     <h1>Creando Producto</h1>
 
-    <form action="/productos" method="post">
+    <form action="/productos" method="post" class="form">
         <fieldset>
             <legend>Información del producto</legend>
 
