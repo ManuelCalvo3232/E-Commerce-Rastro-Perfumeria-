@@ -40,8 +40,25 @@ $app->get("/", function ($request, $response) use ($renderer) {
 
 // Ruta/Productos (listado)
 $app->get("/productos", function ($request, $response) use ($renderer) {
+  $productos = [
+    ["id" => 1, "nombre" => "Bleu de Chanel", "marca" => "Chanel", "precio" => 4500, "ml" => 5, "imagen" => "/img/bleu-chanel.jpg"],
+    ["id" => 2, "nombre" => "Sauvage", "marca" => "Dior", "precio" => 4200, "ml" => 5, "imagen" => "/img/sauvage.jpg"],
+    ["id" => 3, "nombre" => "Aventus", "marca" => "Creed", "precio" => 8900, "ml" => 5, "imagen" => "/img/aventus.jpg"],
+    ["id" => 4, "nombre" => "Good Girl", "marca" => "Carolina Herrera", "precio" => 4300, "ml" => 5, "imagen" => "/img/good-girl.jpg"],
+    ["id" => 5, "nombre" => "Black Opium", "marca" => "YSL", "precio" => 4100, "ml" => 5, "imagen" => "/img/black-opium.jpg"],
+    ["id" => 6, "nombre" => "Baccarat Rouge 540", "marca" => "Maison Francis Kurkdjian", "precio" => 9800, "ml" => 5, "imagen" => "/img/baccarat-540.jpg"],
+  ];
+
+  $queryParams = $request->getQueryParams();
+  $limit = isset($queryParams["limit"]) ? (int) $queryParams["limit"] : null;
+
+  if ($limit !== null && $limit >= 0) {
+    $productos = array_slice($productos, 0, $limit);
+  }
+
   return view($renderer, $response, "productos/index.php", [
     "title" => "Listado de Productos",
+    "productos" => $productos,
   ]);
 });
 
