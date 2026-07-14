@@ -77,6 +77,38 @@ $app->get("/create/productos", function ($request, $response) use ($renderer) {
   ]);
 });
 
+//. 
+$app->post("/productos", function ($request, $response) use ($renderer) {
+  $data = $request->getParsedBody();
+
+  $nombre       = trim($data["nombre-perfume"] ?? "");
+  $marca        = trim($data["marca"] ?? "");
+  $categoria    = trim($data["categoria"] ?? "");
+  $precioEntero = trim($data["precio-entero"] ?? "");
+  $precio5ml    = trim($data["precio-5ml"] ?? "");
+  $precio10ml   = trim($data["precio-10ml"] ?? "");
+  $descripcion  = trim($data["descripcion"] ?? "");
+
+  if ($nombre === "" || $marca === "" || $categoria === "" || $precioEntero === "" || $precio5ml === "" || $precio10ml === "") {
+    return view($renderer, $response, "productos/error.php", [
+      "title" => "Error al crear producto",
+    ])->withStatus(422);
+  }
+
+  return view($renderer, $response, "productos/created.php", [
+    "title" => "Producto creado",
+    "producto" => [
+      "nombre" => $nombre,
+      "marca" => $marca,
+      "categoria" => $categoria,
+      "precioEntero" => $precioEntero,
+      "precio5ml" => $precio5ml,
+      "precio10ml" => $precio10ml,
+      "descripcion" => $descripcion,
+    ],
+  ]);
+});
+
 $app->addErrorMiddleware($debug, true, true);
 
 return $app;
