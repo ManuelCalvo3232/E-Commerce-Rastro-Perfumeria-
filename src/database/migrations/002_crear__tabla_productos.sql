@@ -1,0 +1,9 @@
+CREATE TABLE productos (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    marca_id INT UNSIGNED NOT NULL, 
+    nombre VARCHAR(150) NOT NULL,
+    descripcion TEXT NULL,
+    notas_olfativas TEXT NULL,
+    activo BOOLEAN NOT NULL DEFAULT TRUE,
+    creado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+)

@@ -1,0 +1,2 @@
+ALTER TABLE productos
+ADD CONSTRAINT fk_productos_marca FOREIGN KEY (marca_id) REFERENCES marcas(id) ON DELETE RESTRICT ON UPDATE CASCADE;
